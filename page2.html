@@ -1,124 +1,228 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<title>Chicago Streeterville Pet Shelter</title>
-<style>
-    header {
-        background:url(images/bobo2.JPG)0 -200px no-repeat; /*place image as background*/
-        background-size:1200px;
+  <head>
+    <title>Chicago Streeterville Pet Shelter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      header {
+        background: url(images/bobo2.JPG) 0 -200px no-repeat; /*place image as background*/
+        background-size: 1200px;
         height: 400px; /*give header some height to display the background image*/
-        padding-top:100px;
-        padding-left:100px;
+        padding-top: 100px;
+        padding-left: 100px;
         font-weight: bold;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    li{
-        list-style-type:none;
-        display:inline;
-        padding:0px 20px;
-
-    }
-    li a{
+        font-family: "Times New Roman", Times, serif;
+      }
+      li {
+        list-style-type: none;
+        display: inline;
+        padding: 0px 20px;
+      }
+      li a {
         text-decoration: none;
+      }
+      li a:link {
+        color: #000;
+      }
+      li a:visited {
+        color: #818db3;
+      }
+      li a:hover {
+        color: rgb(63, 184, 103);
+      }
+      li a:active {
+        color: #753a30;
+      }
+      nav {
+        background-color: rgb(255, 245, 238);
+        height: 50px;
+        text-align: center;
+        padding-top: 2px;
+      }
+      main {
+        height: 400px;
+      }
+      main h1 {
+        color: rgb(129, 141, 179);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      main h2{
+          color:rgb(52, 106, 168);
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      }
+      main p {
+        color: #333;
+        font-size: large;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      main table caption{
+          font-size:large;
+          color: #5a70aa;
+      }
+      main table{
+          color: #5a70aa;
+          font-family: Arial, Helvetica, sans-serif;
+      }
+      section #cats .cat {
+        display: inline-block;
+        margin: 0 0.75em;
+        padding: 1.3em 1.5em;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+      section #cats .cat img {
+        width: 200px;
+        height: 300px;
     }
-    li a:link{
-        color:#000;
-    }
-    li a:visited{
-        color:#818db3;
-    }
-    li a:hover{
-        color:#333;
-    }
-    li a:active{
-        color:#753a30;
-    }
-nav{
-    background-color: rgb(255,245,238);
-    height:50px;
-    text-align:center;
-    padding-top:2px;
-}
-main{
-    height: 400px;
-}
-main h1{
-    color:rgb(129,141,179);
-    font-family:Arial, Helvetica, sans-serif
-}
-main p{
-    color: #333;
-    font-size:large;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
-</style>
+      footer {
+        height: 40 px;
+        background-color: rgb(255, 245, 238);
+        text-align: center;
+        padding-top: 20px;
+        color: rgb(211, 218, 240);
+      }
 
-</head>
-<body>
-<!--Container to wrap everything-->
-<div id="container">
-<!--Brand of Website-->
+      footer #nondisclaimer .social {
+        padding: 2.5em;
+        margin-right: 9.25em;
+        float: right;
+      }
 
-<header style="font-size: 60px;color:rgb(238, 165, 165);">Chicago Streeterville Cats Shelter</header>
+      footer #disclaimer {
+        clear: both;
+      }
 
-<!--Main Navigation-->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page2.html">Cats Profile</a></li>
-        <li><a href="page3.html">Contact</a></li>
-    </ul>
+      footer #disclaimer p {
+        font-size: 0.85em;
+        text-align: center;
+      }
 
-</nav> <!--End Main Navigation-->
-<!--Main content-->
-<main>
-    <h1>Cats for adoption:</h1>
-    <table border="1">
-        <caption>Cats information</caption>
-        <thead>
-           <tr>
-               <th>Name</th>
-               <th>NEZHA</th>
-               <th>KONGCI</th>
-               <th>BOBO</th>
-           </tr> 
-        </thead>
-        <tbody>
+      footer #nondisclaimer .social .fa {
+        padding: 15px;
+        font-size: 15px;
+        width: 15px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 4px;
+        border-radius: 50%;
+      }
+
+      footer #nondisclaimer .social .fa:hover {
+        opacity: 0.7;
+      }
+
+      footer #nondisclaimer .social .fa-facebook {
+        background: #3b5998;
+        color: white;
+      }
+
+      footer #nondisclaimer .social .fa-twitter {
+        background: #55acee;
+        color: white;
+      }
+
+      footer #nondisclaimer .social .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Container to wrap everything-->
+    <div id="container">
+      <!--Brand of Website-->
+
+      <header style="font-size: 60px; color: rgb(238, 165, 165)">
+        Chicago Streeterville Cats Shelter
+      </header>
+
+      <!--Main Navigation-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Cats Profile</a></li>
+          <li><a href="page3.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!--End Main Navigation-->
+      <!--Main content-->
+      <main>
+        <h1>Cats for adoption:</h1>
+        <table border="1">
+          <caption>
+            Cats information
+          </caption>
+          <thead>
             <tr>
-                <th>Breed</th>
-                <th>Chinese Dragon Li</th>
-                <th>Domestic long hair</th>
-                <th>Domestic short hair</th>
+              <th>Name</th>
+              <th>NEZHA</th>
+              <th>KONGCI</th>
+              <th>BOBO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Breed</th>
+              <td>Chinese Dragon Li</td>
+              <td>Domestic long hair</td>
+              <td>Domestic short hair</td>
             </tr>
             <tr>
-                <td>Weight</td>
-                <td>18 lbs</td>
-                <td>13 lbs</td>
-                <td>10 lbs</td>
+              <td>Weight</td>
+              <td>18 lbs</td>
+              <td>10 lbs</td>
+              <td>13 lbs</td>
             </tr>
-        </tbody> 
-        <tfoot>
+          </tbody>
+          <tfoot>
             <tr>
-                <td>Gender</td> 
-                <td>male</td>       
-                <td>male</td>      
-                <td>male</td>     
-             </tr>
-        </tfoot>    
-    </table>
-    <h2>Nezha</h2>
-    <img src="images/nezha.JPG" alt="NEZHA" width="200" >
-    <h2>KongCi</h2>
-    <img src="images/kongci.JPG" alt="KONGCI" width="200">
-    <h2>Bobo</h2>
-    <img src="images/bobo1.JPG" alt="BOBO" width="200">
+              <td>Gender</td>
+              <td>male</td>
+              <td>male</td>
+              <td>male</td>
+            </tr>
+          </tfoot>
+        </table>
+        <section>
+        <ul id="cats">
+            <li class="cat">
+        <h2>Nezha</h2>
+        <img src="images/nezha.JPG" alt="NEZHA" width="200" />
+            </li>
+            <li class="cat">       
+        <h2>KongCi</h2>
+        <img src="images/kongci.JPG" alt="KONGCI" width="200" />
+            </li>
+            <li class="cat">
+        <h2>Bobo</h2>
+        <img src="images/bobo1.JPG" alt="BOBO" width="200" />
+            </li>
 
-</main><!--End Main Content-->
-
-
-</div><!--End Container-->
-</body>
-
+        <!--End Main Content-->
+        <footer>
+          <div id="nondisclaimer">
+            <div class="copy">&copy; Copyright 2020::GreatCliffs.com</div>
+            <div class="social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+            </div>
+          </div>
+          <div id="disclaimer">
+            <p>
+              This website is designed and created solely for educational
+              purposes only at Westcliff University. All contents are not
+              intended for any commercial gain or use.
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <!--End Container-->
+  </body>
 </html>

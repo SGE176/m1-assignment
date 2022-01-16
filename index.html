@@ -1,90 +1,175 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<title>Chicago Streeterville Pet Shelter</title>
-<style>
-    header {
-        background:url(images/bobo2.JPG)0 -200px no-repeat; /*place image as background*/
-        background-size:1200px;
-        height: 400px; /*give header some height to display the background image*/
-        padding-top:100px;
-        padding-left:100px;
-        font-weight: bold;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    li{
-        list-style-type:none;
-        display:inline;
-        padding:0px 20px;
 
-    }
-    li a{
+<head>
+    <title>Chicago Streeterville Pet Shelter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        header {
+            background: url(images/bobo2.JPG)0 -200px no-repeat;
+            /*place image as background*/
+            background-size: 1400px;
+            height: 400px;
+            /*give header some height to display the background image*/
+            padding-top: 100px;
+            padding-left: 100px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            padding: 0px 20px;
+
+        }
+
+        
+        nav {
+            background-color: rgb(255, 245, 238);
+            height: 50px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        main {
+            height: 400px;
+        }
+
+        main h1 {
+            color: rgb(129, 141, 179);
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        main p {
+            color: #333;
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        nav{
+            list-style-type: none;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-left: 1px solid rgba(202, 204, 202, 0.6);
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        nav ul li a {
         text-decoration: none;
-    }
-    li a:link{
-        color:#000;
-    }
-    li a:visited{
-        color:#818db3;
-    }
-    li a:hover{
-        color:#333;
-    }
-    li a:active{
-        color:#753a30;
-    }
-nav{
-    background-color: rgb(255,245,238);
-    height:50px;
-    text-align:center;
-    padding-top:2px;
-}
-main{
-    height: 400px;
-}
-main h1{
-    color:rgb(129,141,179);
-    font-family:Arial, Helvetica, sans-serif
-}
-main p{
-    color: #333;
-    font-size:large;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-footer{
-    height:40 px;
-    background-color: rgb(72, 94, 168);
-    text-align: center;
-    padding-top: 20px;
-    color:rgb(211,218,240);
-}
-</style>
+        color: #888;
+      }
+        nav ul li a:hover {
+        color: #358f48;
+      }
+        nav ul li.active {
+        background: #358f48;
+        border:#fff
+      }
+        nav ul li.active a {
+        color: #fff;
+      }
+
+        footer {
+            height: 40 px;
+            background-color: rgb(255, 245, 238);
+            text-align: center;
+            padding-top: 20px;
+            color: rgb(211, 218, 240);
+        }
+
+        footer #nondisclaimer .social {
+            padding: 2.5em;
+            margin-right: 9.25em;
+            float: right;
+        }
+
+        footer #disclaimer {
+            clear: both;
+        }
+
+        footer #disclaimer p {
+            font-size: 0.85em;
+            text-align: center;
+        }
+
+        footer #nondisclaimer .social .fa {
+            padding: 15px;
+            font-size: 15px;
+            width: 15px;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 4px;
+            border-radius: 50%;
+        }
+
+        footer #nondisclaimer .social .fa:hover {
+            opacity: 0.7;
+        }
+
+        footer #nondisclaimer .social .fa-facebook {
+            background: #3b5998;
+            color: white;
+        }
+
+        footer #nondisclaimer .social .fa-twitter {
+            background: #55acee;
+            color: white;
+        }
+
+        footer #nondisclaimer .social .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+    </style>
 
 </head>
+
 <body>
-<!--Container to wrap everything-->
-<div id="container">
-<!--Brand of Website-->
+    <!--Container to wrap everything-->
+    <div id="container">
+        <!--Brand of Website-->
 
-<header style="font-size: 60px;color:rgb(238, 165, 165);">Chicago Streeterville Pet Shelter</header>
+        <header style="font-size: 60px;color:rgb(238, 165, 165);">Chicago Streeterville Pet Shelter</header>
 
-<!--Main Navigation-->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page2.html">Cats Profile</a></li>
-        <li><a href="page3.html">Contact</a></li>
-    </ul>
+        <!--Main Navigation-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Cats Profile</a></li>
+                <li><a href="page3.html">Contact</a></li>
+            </ul>
 
-</nav> <!--End Main Navigation-->
-<!--Main content-->
-<main>
-    <h1>Adopt Today</h1>
-    <p>Are you looking for a new companion? View our featured pets and all our animals ready for adoption!</p>
-</main><!--End Main Content-->
-<!--Footer Information-->
-<footer>&copy; Copyright 2022</footer>
-</div><!--End Container-->
+        </nav>
+        <!--End Main Navigation-->
+        <!--Main content-->
+        <main>
+            <h1>Adopt Today</h1>
+            <p>Are you looking for a new companion? View our featured pets and all our animals ready for adoption!</p>
+        </main>
+        <!--End Main Content-->
+        <!--Footer Information-->
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    &copy; Copyright 2020::GreatCliffs.com
+                </div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University.
+                    All contents are not intended for any commercial gain or use.
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!--End Container-->
 </body>
+
 </html>
