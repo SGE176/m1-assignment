@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chicago Streeterville Pet Shelter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+
+  </head>
+  <body>
+    <!--Container to wrap everything-->
+    <div id="container">
+      <!--Brand of Website-->
+
+      <header style="font-size: 60px; color: rgb(238, 165, 165)">
+        Chicago Streeterville Cats Shelter
+      </header>
+
+      <!--Main Navigation-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Cats Profile</a></li>
+          <li><a href="page4.html">Gallery</a></li>
+          <li><a href="page3.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!--End Main Navigation-->
+      <!--Main content-->
+      <main>
+            <h1>Cats Photos:</h1>
+             <ul id="album"></ul>
+
+        <!--End Main Content-->
+        <footer>
+          <div id="nondisclaimer">
+            <div class="copy">&copy; Copyright 2020::GreatCliffs.com</div>
+            <div class="social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+            </div>
+          </div>
+          <div id="disclaimer">
+            <p>
+              This website is designed and created solely for educational
+              purposes only at Westcliff University. All contents are not
+              intended for any commercial gain or use.
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script>
+      var photos = [];
+      var fileNames = [];
+      var imageList = [];
+      var image;
+      var openList = "<li id='photo'>";
+      var closeList = "</li>";
+
+      //Create a loop to create  images starting with index of 0
+      for (var i = 0; i < 10; i++) {
+        fileNames.push("Cat-" + (i + 1)); //Create image file name and store in the array
+        photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); //Assemble file name into image element and store in an array
+        image = openList + photos[i] + closeList; //Assemble image element from array with list elements and store in a variable
+        imageList.push(image); //Store(push) the assemble list codes into an array
+      }
+      //Display all six image codes stored in the array
+      document.getElementById("album").innerHTML = imageList.join(' ');
+    </script>
+    <!--End Container-->
+  </body>
+</html>
