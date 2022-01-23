@@ -7,8 +7,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-
-
   </head>
   <body>
     <!--Container to wrap everything-->
@@ -31,8 +29,10 @@
       <!--End Main Navigation-->
       <!--Main content-->
       <main>
-            <h1>Cats Photos:</h1>
-             <ul id="album"></ul>
+        <h1>Cats Photos:</h1>
+        <div>
+          <ul id="album"></ul>
+        </div>
 
         <!--End Main Content-->
         <footer>
@@ -58,20 +58,63 @@
       var photos = [];
       var fileNames = [];
       var imageList = [];
+      var captionTexts = [
+        "Kongci",
+        "Nezha under the bed",
+        "Nezha under the table",
+        "Kongci under the bed",
+        "Nezha at the door",
+        "Kongci on the cat tree",
+        "Kongci at the door",
+        "Good Brothers 1",
+        "Good Brothers 2",
+        "BoBo in scraf",
+      ];
+      var descTexts = [
+        "Kongci is sitting in the room",
+        "Nezha is sitting behind Kongci",
+        "Nezha is sitting under the table",
+        "Kongci is sitting under the bed",
+        "Nezha is coming",
+        "Kongci is sitting on his cat tree",
+        "Kongci is watching",
+        "Kongci&Nezha are sitting together",
+        "Kongci&Nezha are hiding together",
+        "Bobo got wrapped up with the scarf",
+      ];
       var image;
+      var caption;
       var openList = "<li id='photo'>";
       var closeList = "</li>";
+      var openCaptionTag = "<span id='catcaptions'>";
+      var closeCaptionTag = "</span>";
+      var openDescTag = "<div id='desc'>";
+      var closeDescTag;
+      var openText= "<div id='text'>";
+      var closeText= "</div>";
 
       //Create a loop to create  images starting with index of 0
       for (var i = 0; i < 10; i++) {
         fileNames.push("Cat-" + (i + 1)); //Create image file name and store in the array
         photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); //Assemble file name into image element and store in an array
-        image = openList + photos[i] + closeList; //Assemble image element from array with list elements and store in a variable
+        image =
+          openList +
+          photos[i] +
+          openCaptionTag +
+          captionTexts[i] +
+          closeCaptionTag +
+          openDescTag+
+          openText+
+          descTexts[i]+
+          closeText+
+          closeDescTag
+          closeList; //Assemble image element from array with list elements and store in a variable
         imageList.push(image); //Store(push) the assemble list codes into an array
       }
       //Display all six image codes stored in the array
-      document.getElementById("album").innerHTML = imageList.join(' ');
+      document.getElementById("album").innerHTML = imageList.join(" ");
     </script>
+
     <!--End Container-->
   </body>
 </html>
