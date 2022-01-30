@@ -150,7 +150,7 @@ main #album #desc {
   cursor: pointer;
 }
 
-main #album #desc #text{
+main #album #text{
   position: relative;
   color: #44b422;
   font-family:'Times New Roman', Times, serif;
@@ -163,4 +163,34 @@ main #album #desc #text{
 }
 main #album #desc:hover{
     opacity: 80%;
+}
+main #infoBox {
+    background-color: rgb(24, 179, 145);
+    width: 30%;
+    height: 200px;
+    position :fixed;
+    top: 100px;
+    left :40%;
+    visibility: invisible;
+    color:white;
+    opacity: 80%;
+    border-radius: 10%;
+}
+main #infoBox #title{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+main #infoBox #info{
+    font-size: 20px;
+    text-align: center;
+}
+
+main #infoBox #closeTexts{
+    color:rgb(24, 120, 209);
+    padding-top: 1px;
+    text-align: left;
+    top:150px;
+    font-size: 20px;
 }
