@@ -1,3 +1,4 @@
+
 var photos = [];
 var fileNames = [];
 var imageList = [];
@@ -53,7 +54,7 @@ var closeButton = ["Click to Close"]
 //Create a loop to create  images starting with index of 0
 for (var i = 0; i < 10; i++) {
   fileNames.push("Cat-" + (i + 1)); //Create image file name and store in the array
-  photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); //Assemble file name into image element and store in an array
+  photos.push("<img class='lightbox-toggle' src='images/" + fileNames[i] + ".jpg'>"); //Assemble file name into image element and store in an array
   image =
     openList +
     photos[i] +
@@ -75,7 +76,7 @@ document.getElementById("album").innerHTML = imageList.join(" ");
 
 //Set up the infoBox
 function displayInfo(i){
-    document.getElementById("infoBox").style.visibility = 'visiable';
+    document.getElementById("infoBox").style.visibility = 'visible';
     document.getElementById("title").innerHTML = captionTexts[i];
     document.getElementById("info").innerHTML = infoText[i];
     document.getElementById("closeText").innerHTML = closeButton;
@@ -86,3 +87,25 @@ closeText.addEventListener("click",hideInfo);
 function hideInfo(){
     document.getElementById("infoBox").style.visibility = 'hidden';
 }
+
+$(document).ready(function(){
+    /* Open lightbox on button click */
+    $('.lightbox-toggle img').click(function(){
+        var img = $(this).clone();
+        $(this).css("cursor","pointer");
+        $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+        $('.box').fadeIn();
+        $('.box').append(img);
+
+        })
+
+
+    $('.close, .backdrop').click(function(){
+        $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+            $('.backdrop').css('display', 'none');
+        });
+        $('.box').fadeOut();
+        $('.box').contents().remove("img");
+    });
+
+});

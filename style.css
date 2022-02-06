@@ -138,11 +138,8 @@ main #album #catcaptions {
 }
 main #album #desc {
   position: relative;
-  width: 100%;
-  height: 100%;
-  bottom:100px;
-  left: 200px;
-  display: flex;
+  width: 50%;
+  height: 100%; 
   align-content: center;
   text-align: center;
   opacity: 0;
@@ -151,10 +148,12 @@ main #album #desc {
 }
 
 main #album #text{
-  position: relative;
+  position: absolute;
   color: #44b422;
   font-family:'Times New Roman', Times, serif;
   padding: 10px;
+  bottom:100px;
+  left: 200px;
   font-size: 20px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -166,12 +165,12 @@ main #album #desc:hover{
 }
 main #infoBox {
     background-color: rgb(24, 179, 145);
-    width: 30%;
-    height: 200px;
+    width: 50%;
+    height: 250px;
     position :fixed;
     top: 100px;
     left :40%;
-    visibility: invisible;
+    visibility:hidden;
     color:white;
     opacity: 80%;
     border-radius: 10%;
@@ -193,4 +192,55 @@ main #infoBox #closeTexts{
     text-align: left;
     top:150px;
     font-size: 20px;
+}
+.lightbox-toggle {
+    color: black;
+}
+  
+.backdrop {
+    z-index: 1;
+    opacity: .0;
+    filter: alpha(opacity=0);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.box {
+    z-index: 2;
+    position: fixed;
+    opacity: 1;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 5px #444444;
+    -webkit-box-shadow: 0px 0px 5px #444444;
+    box-shadow: 0px 0px 5px #444444;
+}
+
+* {
+    z-index: 3;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+#gallery #photo a img {
+    width: 400px;
+}
+
+.box img {
+    width:100%;
 }
